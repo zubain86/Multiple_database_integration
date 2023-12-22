@@ -71,14 +71,14 @@ public class DatabaseConfiguration {
         return em;
     }
 
-//    @Bean(name = "transactionManager")
-//    public PlatformTransactionManager multiTransactionManager() {
-//        JpaTransactionManager transactionManager
-//                = new JpaTransactionManager();
-//        transactionManager.setEntityManagerFactory(
-//                multiEntityManager().getObject());
-//        return transactionManager;
-//    }
+    @Bean(name = "transactionManager")
+    public PlatformTransactionManager multiTransactionManager() {
+        JpaTransactionManager transactionManager
+                = new JpaTransactionManager();
+        transactionManager.setEntityManagerFactory(
+                multiEntityManager().getObject());
+        return transactionManager;
+    }
 
     @Primary
     @Bean(name="entityManagerFactory")
