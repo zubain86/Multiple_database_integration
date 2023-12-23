@@ -2,6 +2,8 @@ package com.example.mdi.configuration;
 
 public class DBContextHolder {
     private static final ThreadLocal<ClientNames> contextHolder = new ThreadLocal<>();
+
+    
     public static void setCurrentDb(ClientNames dbType) {
         contextHolder.set(dbType);
     }

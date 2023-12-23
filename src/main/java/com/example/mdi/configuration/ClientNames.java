@@ -1,5 +1,6 @@
 package com.example.mdi.configuration;
 
 public enum ClientNames {
-    DB1, DB2
+    DB1, DB2;
+
 }
