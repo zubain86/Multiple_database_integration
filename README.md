@@ -118,5 +118,11 @@ public enum ClientNames {
     DB1, DB2
 }
 ```
+# @ReadOnly
+This annotation will direct the request to read database
+
+# @WriteOnly
+This annotation will direct the request to write database
+
 
 
