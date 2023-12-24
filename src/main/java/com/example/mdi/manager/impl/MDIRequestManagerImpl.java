@@ -8,6 +8,7 @@ import com.example.mdi.service.MDIRequestService;
 import com.example.mdi.shared.dto.PostRequestDto;
 import jakarta.transaction.Transactional;
 import org.springframework.stereotype.Component;
+
 @Transactional
 @Component
 public class MDIRequestManagerImpl implements MDIRequestManager {
@@ -19,13 +20,12 @@ public class MDIRequestManagerImpl implements MDIRequestManager {
     }
 
     @Override
-    @WriteOnly
     public PostRequestDto post(PostRequestDto postRequestDto) {
         return mdiRequestService.post(postRequestDto);
     }
 
     @Override
-    @ReadOnly
+    @WriteOnly
     public PostRequestDto get(Long id)
     {
         return mdiRequestService.get(id);
